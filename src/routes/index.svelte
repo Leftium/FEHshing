@@ -1,6 +1,4 @@
-<script lang='coffee'>
-    console.log 'coffeescript!'
-</script>
+<script src='./_index.coffee'></script>
 
 
 <h1>Welcome to SvelteKit</h1>
