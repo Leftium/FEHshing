@@ -6,7 +6,7 @@
             label Last Defense:
             div.sublabel Without lift loss control!
         div.input-wrapper
-            input(inputmode="decimal" 'bind:value={hours}')
+            input(inputmode="decimal" 'bind:value={hours}' on:focus='{handleFocus}')
             span.units {(hours==1 ? 'hour':'hours')} ago
         div
             label Now:
@@ -51,6 +51,9 @@
 
         text-align: right;
         padding: 0 120px 0 0;
+    }
+    input:focus {
+        outline: none;
     }
     .units {
         margin-left: -110px;

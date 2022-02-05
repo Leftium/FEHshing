@@ -48,3 +48,6 @@ makeEventDataUri = (hours) ->
 
     return "data:text/calendar,#{encodeURIComponent(calendarEvent)}"
 
+handleFocus = (e) ->
+    @select()
+
