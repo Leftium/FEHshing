@@ -1,1 +1,1 @@
-console.log 'coffeescript!'
+hours = 20
