@@ -1,26 +1,31 @@
 <script src='./_index.coffee'></script>
 
 <template lang='pug'>
-    div
-        label Last Defense:
-        div.sublabel Without lift loss control!
-    div.input-wrapper
-        input(inputmode="decimal" 'bind:value={hours}')
-        span.units {(hours==1 ? 'hour':'hours')} ago
-    div
-        label Now:
-        span {nowjs.format('ddd-DD h:mma')}
-    div
-        label Immunity Ends: 
-        span {nowjs.add(19-hours, 'hour').format('ddd-DD h:mma')}
-    div
-        button(on:click='{decrementHours}') -
-        button(on:click='{incrementHours}') +
-    div.button-wrapper
-        a.calendar-button(href='{makeEventDataUri(hours)}') Open iCal Event
+    main
+        div
+            label Last Defense:
+            div.sublabel Without lift loss control!
+        div.input-wrapper
+            input(inputmode="decimal" 'bind:value={hours}')
+            span.units {(hours==1 ? 'hour':'hours')} ago
+        div
+            label Now:
+            span {nowjs.format('ddd-DD h:mma')}
+        div
+            label Immunity Ends: 
+            span {nowjs.add(19-hours, 'hour').format('ddd-DD h:mma')}
+        div
+            button(on:click='{decrementHours}') -
+            button(on:click='{incrementHours}') +
+        div.button-wrapper
+            a.calendar-button(href='{makeEventDataUri(hours)}') Open iCal Event
 </template>
 
 <style>
+    main {
+        max-width: 400px;
+        margin: auto;
+    }
     div {
         font-size: 140%;
         margin: 24px 0;
@@ -60,6 +65,7 @@
         width: 50%;
         height: 60px;
         border-radius: 1px;
+        border: 2px solid white;
     }
     .calendar-button {
         display: block;
