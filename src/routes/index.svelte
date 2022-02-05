@@ -23,8 +23,11 @@
 
 <style>
     main {
+        background-color: white;
         max-width: 400px;
-        margin: auto;
+        height: 97.5vh;
+        margin: 0 auto;
+        padding: 10px 20px;
     }
     div {
         font-size: 140%;
@@ -46,6 +49,7 @@
     input {
         font-size: 200%;
         border-radius: 2px;
+        border: 2px solid #aaa;
 
         width: 50px;
 
